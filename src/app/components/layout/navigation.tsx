@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navigation = () => {
   return (
-    <div>
+    <div className="font-spartan opacity-60 font-bold text-[13px] gap-[33px] flex items-center">
       <Link href="/planets/mercury">Mercury</Link>
       <Link href="/planets/venus">Venus</Link>
       <Link href="/planets/earth">Earth</Link>

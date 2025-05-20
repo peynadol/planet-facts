@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Antonio } from "next/font/google";
+import { Antonio, League_Spartan } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/header";
 
 const antonio = Antonio({
   variable: "--font-antonio",
+  subsets: ["latin"],
+});
+
+const spartan = League_Spartan({
+  variable: "--font-spartan",
   subsets: ["latin"],
 });
 
@@ -21,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${antonio.variable} antialiased 
+        className={`${antonio.variable} ${spartan.variable} antialiased 
         bg-[url(/background-stars.svg)]
         `}
       >

@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
-
 body {
   background: #070724;
   color: #FFF;
   background-image: url('/images/background-stars.svg');
   background-size: cover;
+  font-family: var(--font-antonio), sans-serif;
+}
+
+.font-spartan {
+  font-family: var(--font-spartan), sans-serif;
 }
