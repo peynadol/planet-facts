@@ -5,6 +5,7 @@ import PlanetCard from "@/app/components/planets/planet-card";
 import PlanetInfo from "@/app/components/planets/planet-info";
 import PlanetButtons from "@/app/components/planets/planet-buttons";
 import { useState } from "react";
+import PlanetStats from "./planet-stats";
 
 // Removed TypeScript types
 
@@ -31,6 +32,12 @@ export default function PlanetClient({ planet, planetName }) {
         source={currentContent.source}
       />
       <PlanetButtons planetName={planetName} onViewChange={setCurrentView} />
+      <PlanetStats
+        rotation={planet.rotation}
+        revolution={planet.rotation}
+        radius={planet.radius}
+        temperature={planet.temperature}
+      />
     </PlanetCard>
   );
 }
