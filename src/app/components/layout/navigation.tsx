@@ -3,14 +3,14 @@ import Link from "next/link";
 const Navigation = () => {
   return (
     <div>
-    <Link href="/mercury">Mercury</Link>
-    <Link href="/venus">Venus</Link>
-    <Link href="/earth">Earth</Link>
-    <Link href="/mars">Mars</Link>
-    <Link href="/jupiter">Jupiter</Link>
-    <Link href="/saturn">Saturn</Link>
-    <Link href="/uranus">Uranus</Link>
-    <Link href="/neptune">Neptune</Link>
+      <Link href="/planets/mercury">Mercury</Link>
+      <Link href="/planets/venus">Venus</Link>
+      <Link href="/planets/earth">Earth</Link>
+      <Link href="/planets/mars">Mars</Link>
+      <Link href="/planets/jupiter">Jupiter</Link>
+      <Link href="/planets/saturn">Saturn</Link>
+      <Link href="/planets/uranus">Uranus</Link>
+      <Link href="/planets/neptune">Neptune</Link>
     </div>
   );
 };
