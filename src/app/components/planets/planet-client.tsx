@@ -21,16 +21,16 @@ export default function PlanetClient({ planet, planetName }) {
   const geologyImageSrc = `/images/geology-${planetName}.png`;
 
   return (
-    <div className="mx-[165px] mt-[104px] mb-[56px] outline-1">
+    <div className="h-[calc(100dvh - 76px)] flex flex-col justify-between mx-[165px] pt-[104px] pb-[56px] ">
       <PlanetCard>
-        <div className="flex justify-between">
-          <div className=" flex justify-center items-center flex-2/3 outline-amber-400 outline-2">
+        <div className="flex flex-grow h-[600px] outline-1">
+          <div className=" flex justify-center items-center flex-2/3">
             <PlanetImage
               src={imageSrc}
               geologyImage={currentView === "geology" ? geologyImageSrc : null}
             />
           </div>
-          <div className="flex-1/3 flex-col outline-green-500 outline-2">
+          <div className="flex-1/3 flex-col outline-1 flex justify-between pb-16 ">
             <PlanetInfo
               name={planet.name}
               content={currentContent.content}
@@ -42,12 +42,14 @@ export default function PlanetClient({ planet, planetName }) {
             />
           </div>
         </div>
-        <PlanetStats
-          rotation={planet.rotation}
-          revolution={planet.rotation}
-          radius={planet.radius}
-          temperature={planet.temperature}
-        />
+        <div>
+          <PlanetStats
+            rotation={planet.rotation}
+            revolution={planet.rotation}
+            radius={planet.radius}
+            temperature={planet.temperature}
+          />
+        </div>
       </PlanetCard>
     </div>
   );
