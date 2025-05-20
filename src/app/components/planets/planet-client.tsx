@@ -23,14 +23,14 @@ export default function PlanetClient({ planet, planetName }) {
   return (
     <div className="h-[calc(100dvh - 76px)] flex flex-col justify-between mx-[165px] pt-[104px] pb-[56px] ">
       <PlanetCard>
-        <div className="flex flex-grow h-[600px] outline-1">
+        <div className="flex flex-grow h-[600px] ">
           <div className=" flex justify-center items-center flex-2/3">
             <PlanetImage
               src={imageSrc}
               geologyImage={currentView === "geology" ? geologyImageSrc : null}
             />
           </div>
-          <div className="flex-1/3 flex-col outline-1 flex justify-between pb-16 ">
+          <div className="flex-1/3 flex-col  flex justify-between  ">
             <PlanetInfo
               name={planet.name}
               content={currentContent.content}

@@ -1,6 +1,6 @@
 const PlanetStats = ({ rotation, revolution, radius, temperature }) => {
   return (
-    <div className=" flex uppercase gap-[30px] ">
+    <div className=" flex uppercase gap-[30px] mt-14">
       <div className="border border-gray-400/50 px-6 py-5 text-left w-full">
         <p className="font-spartan text-[14px] opacity-60 mb-1">
           Rotation Time
