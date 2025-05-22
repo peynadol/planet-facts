@@ -28,14 +28,14 @@ export default function PlanetClient({
   const geologyImageSrc = `/images/geology-${planetName}.png`;
 
   return (
-    <div className="flex h-[600px]">
-      <div className="flex justify-center items-center flex-2/3">
+    <div className="flex flex-col md:flex-row h-auto md:h-[600px]">
+      <div className="flex justify-center items-center w-full md:flex-2/3">
         <PlanetImage
           src={imageSrc}
           geologyImage={currentView === "geology" ? geologyImageSrc : null}
         />
       </div>
-      <div className="flex-1/3 flex flex-col justify-between">
+      <div className="w-full md:flex-1/3 flex flex-col justify-between">
         <PlanetInfo
           name={planet.name}
           content={currentContent.content}

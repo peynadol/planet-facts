@@ -1,15 +1,29 @@
-import React from "react";
+import Image from "next/image";
 
-const PlanetImage = ({ src, geologyImage }) => {
+type PlanetImageProps = {
+  src: string;
+  geologyImage?: string | null;
+};
+
+const PlanetImage = ({ src, geologyImage }: PlanetImageProps) => {
   return (
     <div className="relative w-[290px] h-[290px]">
-      <img src={src} alt="Planet" className="w-full h-full object-contain" />
+      <Image
+        src={src}
+        alt="Planet"
+        width={290}
+        height={290}
+        style={{ objectFit: "contain" }}
+        priority
+      />
 
       {geologyImage && (
-        <img
+        <Image
           src={geologyImage}
           alt="Geology"
-          className="absolute w-[163px] h-[199px] bottom-0 left-1/2 transform -translate-x-1/2 translate-y-[50%]"
+          width={163}
+          height={199}
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[50%]"
         />
       )}
     </div>

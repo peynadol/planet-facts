@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import clsx from "clsx"; // if you're using Tailwind + clsx
+import clsx from "clsx";
 
 type PlanetView = "overview" | "structure" | "geology";
 
