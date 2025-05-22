@@ -5,29 +5,28 @@ import PlanetStats from "../../components/planets/planet-stats";
 import PlanetClient from "../../components/planets/planet-client";
 
 interface PlanetPageParams {
-  params: {
-    planet: string;
-  };
+  params: Promise<{ planet: string }>;
 }
 
 export default async function PlanetPage({ params }: PlanetPageParams) {
-  const param = await params;
-  const planetName = param.planet.toLowerCase();
-  const planet = data.find((p) => p.name.toLowerCase() === planetName);
+  const { planet } = await params;
+  const planetName = planet.toLowerCase();
 
-  if (!planet) {
+  const planetData = data.find((p) => p.name.toLowerCase() === planetName);
+
+  if (!planetData) {
     notFound();
   }
 
   return (
     <div className="h-[calc(100dvh - 76px)] flex flex-col justify-between mx-[165px] pt-[104px] pb-[56px]">
       <PlanetCard>
-        <PlanetClient planet={planet} planetName={planetName} />
+        <PlanetClient planet={planetData} planetName={planetName} />
         <PlanetStats
-          rotation={planet.rotation}
-          revolution={planet.revolution}
-          radius={planet.radius}
-          temperature={planet.temperature}
+          rotation={planetData.rotation}
+          revolution={planetData.revolution}
+          radius={planetData.radius}
+          temperature={planetData.temperature}
         />
       </PlanetCard>
     </div>
