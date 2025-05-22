@@ -12,7 +12,7 @@ const PlanetStats = ({
   temperature,
 }: PlanetStatProps) => {
   return (
-    <div className="grid grid-cols-1 gap-4 mt-14 sm:grid-cols-2 md:grid-cols-4 md:gap-[30px]">
+    <div className="grid grid-cols-1 gap-4 mt-14 sm:grid-cols-2 md:grid-cols-4 md:gap-[30px] mb-4">
       <div className="border border-gray-400/50 px-6 py-5 text-left w-full">
         <p className="font-spartan text-[14px] opacity-60 mb-1">
           Rotation Time

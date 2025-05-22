@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
@@ -21,9 +21,20 @@ const Navigation = () => {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  // lock scroll when menu is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <div className="relative z-50">
-      {/* Desktop nav */}
       <nav className="hidden md:flex font-spartan font-bold text-[13px] gap-[33px] items-center">
         {links.map((link) => (
           <Link
