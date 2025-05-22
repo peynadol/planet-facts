@@ -28,7 +28,7 @@ export default function PlanetClient({
   const geologyImageSrc = `/images/geology-${planetName}.png`;
 
   return (
-    <div className='flex flex-col md:flex-row h-auto md:h-[600px] '>
+    <div className='flex flex-col md:flex-row h-auto md:h-[600px] mt-4 '>
       <div className='flex justify-center items-center w-full md:flex-2/3'>
         <PlanetImage
           src={imageSrc}
