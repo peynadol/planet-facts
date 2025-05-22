@@ -4,7 +4,13 @@ import PlanetCard from "../../components/planets/planet-card";
 import PlanetStats from "../../components/planets/planet-stats";
 import PlanetClient from "../../components/planets/planet-client";
 
-export default function PlanetPage({ params }) {
+interface PlanetPageParams {
+  params: {
+    planet: string;
+  };
+}
+
+export default function PlanetPage({ params }: PlanetPageParams) {
   const planetName = params.planet.toLowerCase();
   const planet = data.find((p) => p.name.toLowerCase() === planetName);
 

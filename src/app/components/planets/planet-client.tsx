@@ -4,9 +4,20 @@ import PlanetImage from "./planet-image";
 import PlanetInfo from "./planet-info";
 import PlanetButtons from "./planet-buttons";
 import { useState } from "react";
+import { Planet } from "../../types/planet";
 
-export default function PlanetClient({ planet, planetName }) {
-  const [currentView, setCurrentView] = useState("overview");
+type PlanetClientProps = {
+  planet: Planet;
+  planetName: string;
+};
+
+type PlanetView = "overview" | "structure" | "geology";
+
+export default function PlanetClient({
+  planet,
+  planetName,
+}: PlanetClientProps) {
+  const [currentView, setCurrentView] = useState<PlanetView>("overview");
 
   const currentContent = planet[currentView];
   const imageSrc =
