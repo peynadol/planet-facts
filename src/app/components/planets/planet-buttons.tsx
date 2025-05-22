@@ -23,7 +23,7 @@ export default function PlanetButtons({
     <div className="flex flex-col gap-4">
       <button
         onClick={() => handleButtonClick("overview")}
-        className="uppercase font-spartan font-bold text-[12px] flex items-center gap-4 border-1 p-4"
+        className="uppercase font-spartan font-bold text-[12px] flex items-center gap-4 border-1 p-4 hover:bg-yellow-200"
       >
         <span>01</span>
         <span>overview</span>
