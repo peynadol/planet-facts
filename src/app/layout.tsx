@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${antonio.variable} ${spartan.variable} antialiased 
-        bg-[url(/background-stars.svg)] bg-cover bg-no-repeat bg-center bg-fixed]
+        bg-[url(/background-stars.svg)] bg-cover bg-no-repeat bg-center h-dvh]
         `}
       >
         <Header />
