@@ -17,7 +17,7 @@ const Navigation = () => {
   ];
 
   return (
-    <div className="font-spartan  font-bold text-[13px] gap-[33px] flex items-center">
+    <nav className="font-spartan  font-bold text-[13px] gap-[33px] flex items-center">
       {links.map((link) => (
         <Link
           key={link.name}
@@ -30,7 +30,7 @@ const Navigation = () => {
           {link.name}
         </Link>
       ))}
-    </div>
+    </nav>
   );
 };
 
