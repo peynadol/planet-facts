@@ -10,8 +10,9 @@ interface PlanetPageParams {
   };
 }
 
-export default function PlanetPage({ params }: PlanetPageParams) {
-  const planetName = params.planet.toLowerCase();
+export default async function PlanetPage({ params }: PlanetPageParams) {
+  const param = await params;
+  const planetName = param.planet.toLowerCase();
   const planet = data.find((p) => p.name.toLowerCase() === planetName);
 
   if (!planet) {
@@ -19,7 +20,7 @@ export default function PlanetPage({ params }: PlanetPageParams) {
   }
 
   return (
-    <div className="h-[calc(100dvh-76px)] flex flex-col justify-between px-4 sm:px-6 md:px-12 lg:px-[165px] pt-12 md:pt-[104px] pb-8 md:pb-[56px]">
+    <div className="h-[calc(100dvh - 76px)] flex flex-col justify-between mx-[165px] pt-[104px] pb-[56px]">
       <PlanetCard>
         <PlanetClient planet={planet} planetName={planetName} />
         <PlanetStats
