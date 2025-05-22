@@ -1,4 +1,9 @@
-const PlanetInfo = ({ name, content, source }) => {
+type PlanetInfoProps = {
+  name: string;
+  content: string;
+  source: string;
+};
+const PlanetInfo = ({ name, content, source }: PlanetInfoProps) => {
   return (
     <div className="flex flex-col h-full">
       <h1 className="text-[80px]">{name}</h1>
